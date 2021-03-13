@@ -6,6 +6,10 @@ class CricketScreen extends HookWidget {
   static const routeName = '/cricket';
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Cricket"),
+      ),
+    );
   }
 }
