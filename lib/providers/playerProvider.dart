@@ -4,15 +4,20 @@ import 'package:state_notifier/state_notifier.dart';
 class Player {
   num id;
   String name;
-  num points;
-  Player({this.id, this.name, this.points});
+  Player({this.id, this.name});
 }
 
 class PlayerList extends StateNotifier<List<Player>> {
   PlayerList([List<Player> players]) : super(players ?? []);
 
   void add(String name) {
-    state = [...state, new Player(id: state.length + 1, name: name, points: 0)];
+    state = [
+      ...state,
+      new Player(
+        id: state.length + 1,
+        name: name,
+      )
+    ];
   }
 
   void remove(num id) {
