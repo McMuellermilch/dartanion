@@ -29,12 +29,13 @@ class CricketPlayerColumn extends HookWidget {
           Container(
             height: 50,
             child: Text(
-              '0',
+              playerList.getPoints(player.id).toString(),
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
             ),
           ),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 for (var i = 20; i >= 15; i--)
                   CricketButton(

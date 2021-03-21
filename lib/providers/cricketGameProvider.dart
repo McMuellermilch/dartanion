@@ -33,7 +33,17 @@ class CricketButtonList extends StateNotifier<List<Button>> {
         if (btn.points == btnPoints)
           Button.addPlayer(btn.points, [...btn.finished, playerID])
         else
-          Button(btnPoints),
+          btn,
     ];
+  }
+
+  List<num> getBtnFinishers(num btnPoints) {
+    List<num> ret = [];
+    for (final btn in state) {
+      if (btn.points == btnPoints) {
+        ret = btn.finished;
+      }
+    }
+    return ret;
   }
 }

@@ -10,7 +10,7 @@ class CricketHitCount extends StatelessWidget {
         color: Colors.grey.shade900,
         borderRadius: BorderRadius.circular(5.0),
       ),
-      height: 30,
+      height: 40,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

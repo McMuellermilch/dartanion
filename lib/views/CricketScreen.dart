@@ -9,9 +9,6 @@ class CricketScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final playerListState = useProvider(playerListProvider.state);
-    final playerList = useProvider(playerListProvider);
-    final gameState = useProvider(gameProvider.state);
-    final game = useProvider(gameProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -33,6 +30,7 @@ class CricketScreen extends HookWidget {
                   ),
                   Expanded(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         for (var i = 20; i >= 15; i--)
                           Container(
